@@ -2,7 +2,7 @@
 
 namespace models;
 
-class Blog
+class Post
 {
   public $id;
   public $text;

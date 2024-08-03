@@ -7,7 +7,9 @@ services:
       dockerfile: Dockerfile
     volumes:
       # Mounts the local 'app' directory to the container's Nginx root
-      - ./:/var/www/html
+      - ./app:/var/www/html
+    env_file:
+      - .env
 
   # NGINX Service
   nginx:
@@ -16,7 +18,7 @@ services:
       dockerfile: ./nginx/Dockerfile
     volumes:
       # Mountlocal 'app' directory to the Nginx root
-      - ./:/var/www/html
+      - ./app:/var/www/html
     ports:
       - "8080:80"
     depends_on:
