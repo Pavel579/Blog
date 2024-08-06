@@ -7,7 +7,7 @@ use services\Database;
 use services\PostService;
 use services\Validator;
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $database = new Database();
 $db = $database->getConnection();
