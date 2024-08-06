@@ -4,9 +4,9 @@ namespace models;
 
 class Post
 {
-  public $id;
-  public $text;
-  public \DateTime $dateCreated;
-  public User $author;
+    public $id;
+    public $text;
+    public \DateTime $dateCreated;
+    public User $author;
 
 }

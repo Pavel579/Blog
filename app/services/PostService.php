@@ -63,11 +63,13 @@ class PostService
         $postDtos = [];
         foreach ($posts as $post) {
             $postIds[] = $post->id;
+
             $postDto = new PostDto();
             $postDto->id = $post->id;
             $postDto->text = $post->text;
             $postDto->dateCreated = $post->dateCreated;
             $postDto->author = $post->author;
+
             $postDtos[] = $postDto;
         }
 

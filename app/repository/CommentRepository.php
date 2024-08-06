@@ -78,14 +78,17 @@ class CommentRepository
                 $comment->id = $row['id'];
                 $comment->comment = $row['comment'];
                 $comment->dateCreated = new \DateTime($row['date_created']);
+
                 $author = new User($row['author_id'], $row['name']);
                 $comment->author = $author;
+
                 $post = new Post();
                 $post->id = $row['post_id'];
                 $post->text = $row['text'];
                 $post->dateCreated = new \DateTime($row['post_date_created']);
                 $postAuthor = new User($row['post_author_id'], $row['post_author_name']);
                 $post->author = $postAuthor;
+
                 $comment->post = $post;
                 $comments[] = $comment;
             }

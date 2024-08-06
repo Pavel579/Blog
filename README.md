@@ -4,7 +4,7 @@
 Использована библиотека FastRoute - Fast request router for PHP
 Установка:
 ```bash
-composer require nikic/fast-route
+composer install
 ```
 
 В файл .env необходимо прописать актуальные параметры для подключения к БД.

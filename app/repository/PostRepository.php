@@ -34,8 +34,6 @@ class PostRepository
         } else {
             return new Post();
         }
-
-
     }
 
     /**
